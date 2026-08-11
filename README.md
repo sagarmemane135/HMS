@@ -19,7 +19,7 @@ A comprehensive Hospital ERP system built for Frappe / ERPNext v16.
 ## Installation
 
 ```bash
-bench get-app https://github.com/sagarmemane135/HMS.git --branch main
+bench get-app https://github.com/sagarmemane135/HMS.git hms
 bench --site [site-name] install-app hms
 bench --site [site-name] migrate
 ```
