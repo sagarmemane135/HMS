@@ -14,7 +14,9 @@ app_license = "mit"
 
 # Desktop Notifications & Workspaces
 # -----------------------------------
-has_website_permission = "hms.patient_management.doctype.patient.patient.has_website_permission"
+has_website_permission = {
+	"Patient": "hms.patient_management.doctype.patient.patient.has_website_permission"
+}
 
 # DocType Events
 # ---------------
