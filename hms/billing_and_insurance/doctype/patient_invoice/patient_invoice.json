@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:INV-.YYYY.-.#####",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "posting_date",
+  "hospital",
+  "column_break_1",
+  "patient_encounter",
+  "patient_admission",
+  "status",
+  "section_amounts",
+  "consultation_charge",
+  "bed_charge",
+  "lab_charge",
+  "radiology_charge",
+  "pharmacy_charge",
+  "column_break_2",
+  "grand_total",
+  "paid_amount",
+  "outstanding_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hospital",
+   "fieldtype": "Link",
+   "label": "Hospital Branch",
+   "options": "Hospital"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient_encounter",
+   "fieldtype": "Link",
+   "label": "OPD Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "patient_admission",
+   "fieldtype": "Link",
+   "label": "IPD Admission",
+   "options": "Patient Admission"
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Unpaid\nPartially Paid\nPaid\nCancelled"
+  },
+  {
+   "fieldname": "section_amounts",
+   "fieldtype": "Section Break",
+   "label": "Itemized Charges & Total"
+  },
+  {
+   "fieldname": "consultation_charge",
+   "fieldtype": "Currency",
+   "label": "Doctor Consultation Fee"
+  },
+  {
+   "fieldname": "bed_charge",
+   "fieldtype": "Currency",
+   "label": "Bed / Room Charges"
+  },
+  {
+   "fieldname": "lab_charge",
+   "fieldtype": "Currency",
+   "label": "Laboratory Charges"
+  },
+  {
+   "fieldname": "radiology_charge",
+   "fieldtype": "Currency",
+   "label": "Radiology Charges"
+  },
+  {
+   "fieldname": "pharmacy_charge",
+   "fieldtype": "Currency",
+   "label": "Pharmacy Charges"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount"
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Patient Invoice",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Insurance Claim",
+   "link_fieldname": "patient_invoice"
+  }
+ ],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Billing & Insurance",
+ "name": "Patient Invoice",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

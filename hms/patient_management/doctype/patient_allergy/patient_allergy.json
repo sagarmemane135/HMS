@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "allergen",
+  "allergy_type",
+  "severity",
+  "reaction",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "allergen",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Allergen / Substance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "allergy_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Drug\nFood\nEnvironmental\nOther"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Severity",
+   "options": "Mild\nModerate\nSevere\nLife-Threatening"
+  },
+  {
+   "fieldname": "reaction",
+   "fieldtype": "Data",
+   "label": "Reaction Description"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Clinical Notes"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Patient Management",
+ "name": "Patient Allergy",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DIS-.YYYY.-.#####",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "patient_admission",
+  "discharge_date",
+  "discharge_type",
+  "column_break_1",
+  "discharging_doctor",
+  "discharge_condition",
+  "section_summary",
+  "final_diagnosis",
+  "summary_of_case",
+  "treatment_given",
+  "discharge_medications",
+  "followup_advice",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_admission",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Admission",
+   "options": "Patient Admission",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "discharge_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Discharge Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "discharge_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Discharge Type",
+   "options": "Regular Discharge\nAgainst Medical Advice (LAMA)\nTransfer to another Hospital\nDeceased",
+   "default": "Regular Discharge"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discharging_doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Discharging Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "discharge_condition",
+   "fieldtype": "Select",
+   "label": "Condition on Discharge",
+   "options": "Cured / Stable\nImproved\nUnchanged\nCritical",
+   "default": "Improved"
+  },
+  {
+   "fieldname": "section_summary",
+   "fieldtype": "Section Break",
+   "label": "Clinical Case Summary"
+  },
+  {
+   "fieldname": "final_diagnosis",
+   "fieldtype": "Link",
+   "label": "Final Diagnosis",
+   "options": "Diagnosis Master"
+  },
+  {
+   "fieldname": "summary_of_case",
+   "fieldtype": "Text",
+   "label": "Clinical Case Summary & Hospital Course"
+  },
+  {
+   "fieldname": "treatment_given",
+   "fieldtype": "Text",
+   "label": "Procedures & Treatment Given"
+  },
+  {
+   "fieldname": "discharge_medications",
+   "fieldtype": "Table",
+   "label": "Medications on Discharge",
+   "options": "Drug Prescription Item"
+  },
+  {
+   "fieldname": "followup_advice",
+   "fieldtype": "Small Text",
+   "label": "Follow-Up Instructions & Advice"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Discharge Summary",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "IPD Management",
+ "name": "Discharge Summary",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

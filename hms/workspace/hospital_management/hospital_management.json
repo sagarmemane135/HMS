@@ -1,0 +1,240 @@
+{
+ "category": "Modules",
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Hospital & Patient Management System\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patient\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patient Appointment\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patient Encounter\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patient Admission\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bed\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lab Order\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Imaging Order\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pharmacy Dispensing\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patient Invoice\"}},{\"type\":\"card\",\"data\":{\"card_name\":\"Patient & OPD Management\"}},{\"type\":\"card\",\"data\":{\"card_name\":\"IPD & Bed Management\"}},{\"type\":\"card\",\"data\":{\"card_name\":\"Diagnostics & Pharmacy\"}},{\"type\":\"card\",\"data\":{\"card_name\":\"Hospital Administration\"}}]",
+ "creation": "2026-08-11 12:00:00.000000",
+ "custom_blocks": [],
+ "doctype": "Workspace",
+ "for_user": "",
+ "icon": "organization",
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Hospital Management",
+ "links": [
+  {
+   "card_break": 0,
+   "label": "Patient",
+   "link_count": 0,
+   "link_to": "Patient",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Patient Appointment",
+   "link_count": 0,
+   "link_to": "Patient Appointment",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Patient Encounter",
+   "link_count": 0,
+   "link_to": "Patient Encounter",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Vital Signs",
+   "link_count": 0,
+   "link_to": "Vital Signs",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 1,
+   "label": "Patient Admission",
+   "link_count": 0,
+   "link_to": "Patient Admission",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Bed Allocation",
+   "link_count": 0,
+   "link_to": "Bed Allocation",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Discharge Summary",
+   "link_count": 0,
+   "link_to": "Discharge Summary",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Nursing Note",
+   "link_count": 0,
+   "link_to": "Nursing Note",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 1,
+   "label": "Lab Order",
+   "link_count": 0,
+   "link_to": "Lab Order",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Lab Result",
+   "link_count": 0,
+   "link_to": "Lab Result",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Imaging Order",
+   "link_count": 0,
+   "link_to": "Imaging Order",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Radiology Report",
+   "link_count": 0,
+   "link_to": "Radiology Report",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Pharmacy Dispensing",
+   "link_count": 0,
+   "link_to": "Pharmacy Dispensing",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 1,
+   "label": "Hospital",
+   "link_count": 0,
+   "link_to": "Hospital",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Department",
+   "link_count": 0,
+   "link_to": "Department",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Doctor",
+   "link_count": 0,
+   "link_to": "Doctor",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Bed",
+   "link_count": 0,
+   "link_to": "Bed",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Patient Invoice",
+   "link_count": 0,
+   "link_to": "Patient Invoice",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "card_break": 0,
+   "label": "Insurance Claim",
+   "link_count": 0,
+   "link_to": "Insurance Claim",
+   "link_type": "DocType",
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Hospital Setup",
+ "name": "Hospital Management",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Patient",
+   "link_to": "Patient",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Patient Appointment",
+   "link_to": "Patient Appointment",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "Patient Encounter",
+   "link_to": "Patient Encounter",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Patient Admission",
+   "link_to": "Patient Admission",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "Bed",
+   "link_to": "Bed",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "",
+   "label": "Lab Order",
+   "link_to": "Lab Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "",
+   "label": "Imaging Order",
+   "link_to": "Imaging Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Teal",
+   "doc_view": "",
+   "label": "Pharmacy Dispensing",
+   "link_to": "Pharmacy Dispensing",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Patient Invoice",
+   "link_to": "Patient Invoice",
+   "type": "DocType"
+  }
+ ],
+ "title": "Hospital Management"
+}

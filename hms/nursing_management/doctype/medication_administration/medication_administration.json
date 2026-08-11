@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MAR-.YYYY.-.#####",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "patient_admission",
+  "medication",
+  "dosage",
+  "column_break_1",
+  "scheduled_datetime",
+  "administered_datetime",
+  "administered_by",
+  "status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_admission",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Admission",
+   "options": "Patient Admission"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Medication / Drug",
+   "options": "Medication Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dosage",
+   "fieldtype": "Data",
+   "label": "Dosage & Route"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scheduled_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Scheduled Date & Time",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "administered_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Actual Administered Time"
+  },
+  {
+   "fieldname": "administered_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Administered By Nurse",
+   "options": "Medical Staff"
+  },
+  {
+   "default": "Given",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Given\nRefused\nMissed\nHeld"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Nurse Remarks / Patient Response"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Nursing Management",
+ "name": "Medication Administration",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

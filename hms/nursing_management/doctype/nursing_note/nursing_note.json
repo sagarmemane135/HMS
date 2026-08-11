@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:NUR-.YYYY.-.#####",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "patient_admission",
+  "shift",
+  "column_break_1",
+  "nurse",
+  "note_datetime",
+  "vital_signs",
+  "section_content",
+  "nursing_observation",
+  "care_plan_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_admission",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Admission",
+   "options": "Patient Admission"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nurse Shift",
+   "options": "Morning Shift\nEvening Shift\nNight Shift",
+   "default": "Morning Shift"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nurse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Attending Nurse",
+   "options": "Medical Staff",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "note_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vital_signs",
+   "fieldtype": "Link",
+   "label": "Vital Signs Record",
+   "options": "Vital Signs"
+  },
+  {
+   "fieldname": "section_content",
+   "fieldtype": "Section Break",
+   "label": "Nursing Observations & Care Plan"
+  },
+  {
+   "fieldname": "nursing_observation",
+   "fieldtype": "Text",
+   "label": "Nursing Observations / SOAP Progress",
+   "reqd": 1
+  },
+  {
+   "fieldname": "care_plan_notes",
+   "fieldtype": "Small Text",
+   "label": "Intake/Output & Care Instructions"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Nursing Management",
+ "name": "Nursing Note",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

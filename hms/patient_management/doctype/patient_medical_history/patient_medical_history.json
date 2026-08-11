@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "condition_disease",
+  "diagnosis_date",
+  "status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "condition_disease",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Condition / Disease / Surgery",
+   "reqd": 1
+  },
+  {
+   "fieldname": "diagnosis_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Diagnosed Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nResolved\nChronic\nManaged"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Details / Treatment Notes"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Patient Management",
+ "name": "Patient Medical History",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

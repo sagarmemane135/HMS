@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ENC-.YYYY.-.#####",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_patient",
+  "patient",
+  "patient_name",
+  "encounter_date",
+  "encounter_type",
+  "column_break_1",
+  "doctor",
+  "appointment",
+  "vital_signs",
+  "status",
+  "section_clinical",
+  "chief_complaint",
+  "history_of_present_illness",
+  "physical_examination",
+  "primary_diagnosis",
+  "secondary_diagnosis",
+  "section_prescription",
+  "drug_prescription",
+  "section_followup",
+  "followup_date",
+  "clinical_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_patient",
+   "fieldtype": "Section Break",
+   "label": "Patient & Encounter Details"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "encounter_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Encounter Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Encounter Type",
+   "options": "OPD Consultation\nIPD Visit\nEmergency\nTeleconsultation",
+   "default": "OPD Consultation"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Attending Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "label": "Linked Appointment",
+   "options": "Patient Appointment"
+  },
+  {
+   "fieldname": "vital_signs",
+   "fieldtype": "Link",
+   "label": "Vital Signs Record",
+   "options": "Vital Signs"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "section_clinical",
+   "fieldtype": "Section Break",
+   "label": "Clinical Assessment"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Small Text",
+   "label": "Chief Complaint / Reason for Visit"
+  },
+  {
+   "fieldname": "history_of_present_illness",
+   "fieldtype": "Text",
+   "label": "History of Present Illness (HPI)"
+  },
+  {
+   "fieldname": "physical_examination",
+   "fieldtype": "Text",
+   "label": "Physical Examination Findings"
+  },
+  {
+   "fieldname": "primary_diagnosis",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Primary Diagnosis",
+   "options": "Diagnosis Master"
+  },
+  {
+   "fieldname": "secondary_diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Secondary Diagnoses / Notes"
+  },
+  {
+   "fieldname": "section_prescription",
+   "fieldtype": "Section Break",
+   "label": "Prescriptions & Medications"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "fieldtype": "Table",
+   "label": "Prescribed Drugs",
+   "options": "Drug Prescription Item"
+  },
+  {
+   "fieldname": "section_followup",
+   "fieldtype": "Section Break",
+   "label": "Follow-Up & Discharge Notes"
+  },
+  {
+   "fieldname": "followup_date",
+   "fieldtype": "Date",
+   "label": "Follow-Up Date"
+  },
+  {
+   "fieldname": "clinical_notes",
+   "fieldtype": "Text",
+   "label": "Additional Clinical / Patient Instructions"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Clinical Records",
+ "name": "Patient Encounter",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

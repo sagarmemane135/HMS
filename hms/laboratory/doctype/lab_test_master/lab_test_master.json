@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:lab_test_name",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lab_test_name",
+  "lab_test_code",
+  "department",
+  "specimen_type",
+  "column_break_1",
+  "standard_rate",
+  "normal_range",
+  "unit",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "lab_test_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Test Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "lab_test_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Test Code"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "specimen_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Specimen Type",
+   "options": "Blood\nUrine\nStool\nSputum\nCSF\nSwab\nTissue",
+   "default": "Blood"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "standard_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Standard Fee / Price"
+  },
+  {
+   "fieldname": "normal_range",
+   "fieldtype": "Data",
+   "label": "Normal Reference Range (Text)"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Measurement Unit (e.g. mg/dL, g/L)"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Test Instructions / Description"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Laboratory",
+ "name": "Lab Test Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

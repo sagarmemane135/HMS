@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ADM-.YYYY.-.#####",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "admission_datetime",
+  "admission_type",
+  "column_break_1",
+  "admitting_doctor",
+  "department",
+  "assigned_bed",
+  "status",
+  "section_details",
+  "primary_diagnosis",
+  "attendant_name",
+  "attendant_mobile",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "admission_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Admission Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "admission_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Admission Type",
+   "options": "Elective\nEmergency\nTransfer",
+   "default": "Elective"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admitting_doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Admitting Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "admitting_doctor.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "assigned_bed",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Bed",
+   "options": "Bed"
+  },
+  {
+   "default": "Admitted",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Admitted\nDischarged\nCancelled"
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Clinical & Attendant Info"
+  },
+  {
+   "fieldname": "primary_diagnosis",
+   "fieldtype": "Link",
+   "label": "Admission Diagnosis",
+   "options": "Diagnosis Master"
+  },
+  {
+   "fieldname": "attendant_name",
+   "fieldtype": "Data",
+   "label": "Attendant Name"
+  },
+  {
+   "fieldname": "attendant_mobile",
+   "fieldtype": "Data",
+   "label": "Attendant Mobile"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Patient Admission",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Bed Allocation",
+   "link_fieldname": "patient_admission"
+  },
+  {
+   "link_doctype": "Discharge Summary",
+   "link_fieldname": "patient_admission"
+  }
+ ],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "IPD Management",
+ "name": "Patient Admission",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

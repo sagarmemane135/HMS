@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "drug",
+  "dosage",
+  "route",
+  "frequency",
+  "duration_days",
+  "timing",
+  "instructions"
+ ],
+ "fields": [
+  {
+   "fieldname": "drug",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Medication / Drug",
+   "options": "Medication Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dosage",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dosage (e.g. 500mg)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Route",
+   "options": "Oral\nIV\nIM\nSC\nTopical\nInhalation",
+   "default": "Oral"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Frequency",
+   "options": "Once daily (1-0-0)\nTwice daily (1-0-1)\nThree times daily (1-1-1)\nFour times daily (1-1-1-1)\nEvery 8 hours\nEvery 12 hours\nAs needed (PRN)\nStat (Immediately)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Duration (Days)",
+   "default": 5
+  },
+  {
+   "fieldname": "timing",
+   "fieldtype": "Select",
+   "label": "Food Timing",
+   "options": "After Food\nBefore Food\nWith Food\nEmpty Stomach",
+   "default": "After Food"
+  },
+  {
+   "fieldname": "instructions",
+   "fieldtype": "Small Text",
+   "label": "Special Instructions"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Clinical Records",
+ "name": "Drug Prescription Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

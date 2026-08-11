@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RAD-.YYYY.-.#####",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "imaging_order",
+  "modality",
+  "report_date",
+  "column_break_1",
+  "radiologist",
+  "pacs_dicom_url",
+  "section_findings",
+  "findings",
+  "impression",
+  "recommendations",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "imaging_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Imaging Order",
+   "options": "Imaging Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "modality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Modality"
+  },
+  {
+   "default": "Today",
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Report Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "radiologist",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Radiologist Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pacs_dicom_url",
+   "fieldtype": "Data",
+   "label": "PACS / DICOM Image URL"
+  },
+  {
+   "fieldname": "section_findings",
+   "fieldtype": "Section Break",
+   "label": "Radiological Findings & Impression"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Text",
+   "label": "Detailed Radiological Findings",
+   "reqd": 1
+  },
+  {
+   "fieldname": "impression",
+   "fieldtype": "Text",
+   "label": "Diagnostic Impression",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Small Text",
+   "label": "Further Recommendations"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Radiology Report",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Radiology",
+ "name": "Radiology Report",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

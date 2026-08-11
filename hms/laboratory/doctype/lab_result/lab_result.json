@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LBR-.YYYY.-.#####",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "lab_order",
+  "lab_test",
+  "result_date",
+  "column_break_1",
+  "result_value",
+  "unit",
+  "normal_range",
+  "is_abnormal",
+  "section_signoff",
+  "lab_technician",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lab_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lab Order",
+   "options": "Lab Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lab_test",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lab Test",
+   "options": "Lab Test Master",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "result_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Result Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "result_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Result Value",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "lab_test.unit",
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fetch_from": "lab_test.normal_range",
+   "fieldname": "normal_range",
+   "fieldtype": "Data",
+   "label": "Normal Reference Range"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_abnormal",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Abnormal Result Flag"
+  },
+  {
+   "fieldname": "section_signoff",
+   "fieldtype": "Section Break",
+   "label": "Technician Sign-Off & Remarks"
+  },
+  {
+   "fieldname": "lab_technician",
+   "fieldtype": "Link",
+   "label": "Lab Technician",
+   "options": "Medical Staff"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Technician Remarks / Commentary"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Lab Result",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Laboratory",
+ "name": "Lab Result",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

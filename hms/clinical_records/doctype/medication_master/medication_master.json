@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:drug_name",
+ "creation": "2026-08-11 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "drug_name",
+  "generic_name",
+  "dosage_form",
+  "strength",
+  "column_break_1",
+  "route_of_administration",
+  "manufacturer",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "drug_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Brand / Drug Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "generic_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Generic Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dosage_form",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Dosage Form",
+   "options": "Tablet\nCapsule\nSyrup\nInjection\nOintment\nDrops\nInhaler\nIV Fluid\nPatch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "strength",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Strength (e.g. 500mg)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "route_of_administration",
+   "fieldtype": "Select",
+   "label": "Route",
+   "options": "Oral\nIV (Intravenous)\nIM (Intramuscular)\nSC (Subcutaneous)\nTopical\nOphthalmic\nNasal\nInhalation",
+   "default": "Oral"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "Manufacturer"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Prescribing Information"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-11 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Clinical Records",
+ "name": "Medication Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
