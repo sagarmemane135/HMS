@@ -3,7 +3,7 @@ requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "hms"
+name = "hpms"
 authors = [
     { name = "sagarmemane135", email = "wjones13522@gmail.com" }
 ]
@@ -17,4 +17,4 @@ dependencies = []
 Homepage = "https://github.com/sagarmemane135/Frappe-Prod-Ready-Setup"
 
 [tool.flit.module]
-name = "hms"
+name = "hpms"

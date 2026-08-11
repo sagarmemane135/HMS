@@ -1,4 +1,4 @@
-app_name = "hms"
+app_name = "hpms"
 app_title = "Hospital Management System"
 app_publisher = "sagarmemane135"
 app_description = "Frappe v16 Hospital & Patient Management System"
@@ -9,13 +9,13 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/hms/css/hms.css"
-# app_include_js = "/assets/hms/js/hms.js"
+# app_include_css = "/assets/hpms/css/hpms.css"
+# app_include_js = "/assets/hpms/js/hpms.js"
 
 # Desktop Notifications & Workspaces
 # -----------------------------------
 has_website_permission = {
-	"Patient": "hms.patient_management.doctype.patient.patient.has_website_permission"
+	"Patient": "hpms.patient_management.doctype.patient.patient.has_website_permission"
 }
 
 # DocType Events
@@ -23,8 +23,8 @@ has_website_permission = {
 # Hook on document events for automated workflows (e.g., bed status update on admission/discharge)
 doc_events = {
 	"Bed Allocation": {
-		"on_submit": "hms.ipd_management.doctype.bed_allocation.bed_allocation.update_bed_status",
-		"on_cancel": "hms.ipd_management.doctype.bed_allocation.bed_allocation.release_bed_status"
+		"on_submit": "hpms.ipd_management.doctype.bed_allocation.bed_allocation.update_bed_status",
+		"on_cancel": "hpms.ipd_management.doctype.bed_allocation.bed_allocation.release_bed_status"
 	}
 }
 
@@ -32,7 +32,7 @@ doc_events = {
 # ---------------
 # scheduler_events = {
 # 	"daily": [
-# 		"hms.tasks.daily_bed_occupancy_report"
+# 		"hpms.tasks.daily_bed_occupancy_report"
 # 	]
 # }
 

@@ -1,4 +1,4 @@
-# Hospital & Patient Management System (HMS) - Frappe v16
+# Hospital & Patient Management System (HPMS) - Frappe v16
 
 A comprehensive Hospital ERP system built for Frappe / ERPNext v16.
 
@@ -19,15 +19,8 @@ A comprehensive Hospital ERP system built for Frappe / ERPNext v16.
 ## Installation
 
 ```bash
-# 1. Clone repository into apps/hms (lowercase folder name)
-git clone https://github.com/sagarmemane135/HMS.git apps/hms
-
-# 2. Install app dependencies and build assets
-bench pip install -e apps/hms
-bench build --app hms
-
-# 3. Install on your site
-bench --site [site-name] install-app hms
+bench get-app https://github.com/sagarmemane135/hpms.git
+bench --site [site-name] install-app hpms
 bench --site [site-name] migrate
 ```
 
