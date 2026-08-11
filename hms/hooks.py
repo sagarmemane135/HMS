@@ -9,8 +9,8 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/hms/css/hms.css"
-# app_include_js = "/assets/hms/js/hms.js"
+app_include_css = "/assets/hms/css/hms.min.css"
+app_include_js = "/assets/hms/js/hms.min.js"
 
 # Desktop Notifications & Workspaces
 # -----------------------------------

@@ -1,0 +1,8 @@
+{
+	"js/hms.min.js": [
+		"public/js/hms.js"
+	],
+	"css/hms.min.css": [
+		"public/css/hms.css"
+	]
+}
